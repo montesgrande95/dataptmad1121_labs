@@ -36,3 +36,18 @@ b = input('Enter maximum string length: ')
 n = input('How many random strings to generate? ')
 
 print(BatchStringGenerator(int(n), int(a), int(b)))
+
+
+#--------------------------------------------MY CODE------------------------------------------------------------------
+
+
+%%time
+import random, string
+a = input('Enter minimum string length: ')
+b = input('Enter maximum string length: ')
+n = input('How many random strings to generate? ')
+for i in range(int(n)):
+    longitud = [random.randint(int(a),int(b))]
+    x = ''.join(random.choices(string.ascii_lowercase + string.digits, k=longitud[0]))
+
+    
